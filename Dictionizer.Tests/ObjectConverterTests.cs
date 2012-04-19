@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
-using Dictionizer;
+
 
 namespace Dictionizer.Tests
 {
@@ -18,7 +15,6 @@ namespace Dictionizer.Tests
         public Simple Simple1 { get; set; }
         public string Prop1 { get; set; }
     }
-
 
     [TestFixture]
     public class ObjectConverterTests
