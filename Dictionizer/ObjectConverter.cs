@@ -29,7 +29,8 @@ namespace Dictionizer
             foreach (var prop in item.GetType().GetProperties())
             {
                 var name = prop.Name;
-                if (!prop.PropertyType.IsValueType && deepCopy)
+                var valueType = prop.PropertyType == typeof(String) || prop.PropertyType.IsValueType;
+                if (!valueType && deepCopy)
                 {       
                     result[name] = prop.GetValue(item, null).ToDictionary(true);                        
                 }else
